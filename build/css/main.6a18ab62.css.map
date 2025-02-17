@@ -1,0 +1,1 @@
+{"version":3,"file":"css/main.6a18ab62.css","mappings":"AACA,OACI,cACA,aAEA,YACI,cACA,e","sources":["webpack://webpack/./src/components/App.scss"],"sourcesContent":["\nbutton {\n    color:aquamarine;\n    padding: 10px;\n\n    span {\n        color: cornflowerblue;\n        font-size: 35px;\n    }\n}"],"names":[],"sourceRoot":""}
