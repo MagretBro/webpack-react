@@ -3,7 +3,7 @@ import webpack, {Configuration, DefinePlugin} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {BuildOptions} from "./types/types";
-// import {BundleAnalyzerPlugin} from "webpack-bundle-analyzer";
+import {BundleAnalyzerPlugin} from "webpack-bundle-analyzer";
 // import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 // import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import path from "path";
@@ -35,6 +35,7 @@ export function buildPlugins({mode, paths}: BuildOptions): Configuration['plugin
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css',
         }))
+        plugins.push(new BundleAnalyzerPlugin())
         // plugins.push(new CopyPlugin({
         //     patterns: [
         //         { from: path.resolve(paths.public, 'locales'), to: path.resolve(paths.output, 'locales') },
